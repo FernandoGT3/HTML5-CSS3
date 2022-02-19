@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de ID  e Class</title>
+
+    <style>
+        h1{
+            background-color: red;
+        }
+
+        p{
+            color: rgb(109, 109, 204);
+        }
+
+        #cabecalho-dois{
+            background-color: purple;
+        }
+
+        .fundo-vermelho{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Podemos ter Atributos que possuem algum valor, e outros que não. Neste caso, o
+        navegador atribui um valor boleano: "true" ou "false".</p>
+        <p>Os atributos mais famosos são:</p>
+    <ol>
+        <li>ID</li><p>O identificador é único</p>
+        <li>Class</li><p>O identificador pode repetir, não é único</p>
+    </ol>
+    <p>Esses identificadores são importantes quando estamos usando <b>JS</b> e <b>CSS</b></p>
+    <p>Exemplos e Teste:</p>
+
+    <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda">
+        Vai vir aqui!!
+    </h1>
+    <h1 id="cabecalho-dois" class="fundo-vermelho">
+        Vai vir aqui!!
+    </h1>
+    <p>É difícil sobrescrever um atributo ID, já que sua especificidade é maior, tem maior prioridade</p>
+</body>
+</html>
