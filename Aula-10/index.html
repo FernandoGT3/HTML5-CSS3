@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        table td,
+        table th {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            /*unindo as bordas*/
+            width: 800px;
+        }
+
+        table caption {
+            caption-side: bottom;
+            text-align: right;
+            font-style: italic;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        tfoot td,
+        table th {
+            background-color: #ddd;
+        }
+
+        tfoot td {
+            font-style: italic;
+        }
+
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto; /*se o conteúdo for maior que o tamanho da tela
+            teremos um scroll nessa div*/
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Criando Tabelas</h1>
+    <div class="responsive-table"> 
+        <!--Colocando a Table nem uma div para garantir a responsividade-->
+        <table>
+            <caption> Descrição para a Tabela</caption>
+            <!--Cabeçalho-->
+            <thead>
+                <!-- As linhas sao Tr e as colunas sao Td ou Th-->
+                <tr>
+                    <th>Título 1</th>
+                    <th>Título 2</th>
+                    <th>Título 3</th>
+                </tr>
+            </thead>
+            <!--Corpo-->
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Ocupando duas colunas</td>
+                    <td rowspan="2">Ocupando duas linhas</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                </tr>
+            </tbody>
+            <!--Rodapé-->
+            <tfoot>
+                <tr>
+                    <td>Rodape 1</td>
+                    <td>Rodape 2</td>
+                    <td>Rodape 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>
