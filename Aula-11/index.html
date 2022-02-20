@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários e Inputs</title>
+
+    <style>
+        label {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <!--Action é para onde o formulário será enviado, e o target é se vai 
+        recarregar na mesma página ou em outra aba -->
+        <!--A Tag fieldset serve para agrupar campos relacionados do formulário
+        e o elemento legend dá uma etiqueta para este agrupamento -->
+        <!--Não pode por um formulário dentro de outro-->
+
+        <p>Meu Formulário</p>
+        <!--Quando temos um campo de Texto puro, porém não há um campo especifico para esse dado,
+        como um nome, usamos o input do tipo texto-->
+        <p>
+            <label for="nome"> Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <!--O placeholder é considerado um valor vazio para o servidor -->
+            <!--O name será usado no backend, é o nome do input-->
+            <!--O value é o valor do input, vai chegar junto com o name ao servidor-->
+        </p>
+        <p>
+            Gênero:
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <!--Agrupando pelo Name, para não poder marcar separado-->
+            <label for="feminino"> Feminino</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino"> Masculino</label>
+            <!--Não pode marcar mais de uma opção-->
+        </p>
+        <p>
+            <label for="file">Sua Foto: </label>
+            <input type="file" id="file" name="file" accept=".png,.svg,image/*" multiple>
+        </p>
+        <p> Tenho Conhecimento em :
+            <label for="Python">Python</label>
+            <input type="checkbox" id="Python" name="Python" value="sim" checked>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="html" name="html" value="sim">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="css" name="css" value="sim">
+            <!--Pode marcar nenhuma ou quantas opções quiser-->
+        </p>
+        <p>
+            <label for="date">Date: </label>
+            <input type="date" id="date" name="date" value="2020-04-20">
+        </p>
+        <p>
+            <label for="datetime">Date: </label>
+            <input type="datetime-local" id="datetime" name="datetime" value="2020-04-20T20:00">
+        </p>
+        <p>
+            <label for="time">Date: </label>
+            <input type="time" id="time" name="time" value="20:00:05">
+        </p>
+        <p>
+            <label for="cor">Cor Preferida: </label>
+            <input type="color" id="cor" name="cor" value="#003d66">
+        </p>
+        <p>
+            <label for="number">Number: </label>
+            <input type="number" id="number" name="number" placeholder="Digite um Número" min="10" max="100" step="5">
+        </p>
+        <p>
+            <label for="range">Range: </label>
+            <input type="range" id="range" name="range" min="0" max="100" step="2" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0" label="0%"></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50" label="50%"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+                <option value="100" label="100%"></option>
+            </datalist>
+        </p>
+        <p>
+            <label for="search">Buscar: </label>
+            <input type="search" id="search" name="search" placeholder="search">
+        </p>
+        <p>
+            <label for="select">Selecione:</label>
+            <select name="select" id="select" multiple>
+                <optgroup label="Estações">
+                    <option value="Verão" label="Verão" selected></option>
+                    <option value="Inverno" label="Inverno" disabled></option>
+                    <option value="Outono" label="Outono"></option>
+                    <option value="Primavera" label="Primavera"></option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="textarea">Fale sobre você </label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" name="email" placeholder="ex: exemplo@email.com">
+        </p>
+        <p>
+            <label for="password">Senha: </label>
+            <input type="password" id="password" name="password" placeholder="Digite sua Senha:">
+        </p>
+
+        <p>
+            <label for="url">URL do seu Site: </label>
+            <input type="url" id="url" name="url" placeholder="www.portifolio.com">
+        </p>
+
+        <p>
+            <button type="reset"> Reset</button>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+</body>
+
+</html>
