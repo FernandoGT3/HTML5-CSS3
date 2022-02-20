@@ -1,0 +1,65 @@
+*{
+    /*É o seletor (all), seleciona todos os elementos da página*/
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    /*Seletor de Tag, é aplicado em todos os parágrafos do documento*/
+    color: aqua;
+}
+
+body div section h1{
+    /*Seleção de descendentes*/
+    color: rgb(156, 206, 76);
+}
+
+body div section h1,
+body div section p{
+    /*Podemos aplicar um estilo em mais de um seletor, usando dois seletores*/
+    font-family: sans-serif;
+}
+
+.caixa{
+    /*Seleção por classes, e por ser reutilizada em outros elementos*/
+    background-color: rgb(156, 73, 73);
+    height: auto;
+    width: auto;
+}
+
+.caixa h1,p{
+    /*Seleção de Tags que são descendentes de Classes*/
+    font-style: italic;
+}
+
+div.caixa .conteiner{
+    /*Seleção de Classes descendentes de outras classes, 
+    e podemos fazer isso com todos os elementos*/
+    /*E podemos especificar a classe colocando o elemento antes*/
+    padding: 30px;
+}
+
+/*Podemos por uma classe no body fazendo com que alguns elementos da página se comportem de alguma maneira diferente, com Js colocamos o "error" no body*/
+
+.pai{
+    background-color: rgb(233, 233, 153);
+    /*Se aplica no filho também por conta da herança
+    background-color: initial; Agora não herda mais*/
+}
+
+.pai .filho{
+    /*Se colocarmos ".pai.filho", ou seja, colado não funcionaria,
+    porque não temos um elemento que tenha essas duas classes*/
+    color: rgb(172, 192, 152);
+}
+
+/*E podemos selecionar o filho direto do pai sem pegar a sua filha*/
+.pai >.filho{
+    color: red;
+}
+/*ligados diretamente, se tiver outro elemento no meio do caminho, não funciona, porque não são filho
+diretamente*/
+.pai >.filho >.filho{
+    color: blue;
+}
+
