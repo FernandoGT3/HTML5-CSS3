@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+
+    <style> 
+        .section-one,
+        .section-two{
+            box-sizing: border-box; /*As bordas e os Paddings serão usados no calculo da altura e largura do elemento*/
+        }
+        
+        .section-one{
+            background-image: url(https://static.educalingo.com/img/en/800/nature.jpg);
+            background-size: cover;
+            background-position: center center;
+            color: white;
+
+            width: 200px;
+            border: 5px solid black;
+            padding: 15px;/*Usamos o padding para encher o conteúdo de dentro de uma caixa*/
+            /*Adicionamos o preenchimento seguindo a ordem: Topo, Direita, Embaixo e Esquerda*/ 
+            margin: 20px;/*A margem serve para empurrar o conteúdo de um outro conteúdo*/
+        }
+
+        .section-two{
+            background-color: cyan;
+            width: 200px;
+            border: 10px solid;
+            border-top-color: tomato;
+            border-left-color: red;
+            border-right-color: blue;
+            border-bottom-color: green;
+            padding: 15px;
+            margin: 20px; /*As margens não são somadas, e sim a maior que é usada*/
+        } 
+
+    </style>
+
+</head>
+<body>
+    <h1>Box-Model</h1>
+    <p>Cada elemento é representado como um box retangular e são descritos
+        usando o box model padrão.Este modelo descreve o conteúdo do espaço 
+        ocupado por um elemento. Cada box possui 4 edges: margin edge, border edge, padding edge e content edge.
+    </p>
+    
+    <section class="section-one"> Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit. Adipisci eum autem aliquid 
+        sit fugit quis, voluptatem ut unde ea quos quas quaerat?
+        Dignissimos, inventore nostrum. Libero esse neque illo ab. </section>
+
+    <section class="section-two"> 2 </section>
+</body>
+</html>
