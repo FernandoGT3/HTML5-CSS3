@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clonando site da Netflix</title>
+
+    <style>
+        * {
+            margin: 0;
+            /*retirando as margens e espaços do body*/
+            padding: 0;
+        }
+
+        body {
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/ed0b5df9-ba9d-4534-bd09-57993daeda56/52609230-dd78-4dba-82a1-8bb3ac3803e6/BR-pt-20220214-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+            background-size: cover;
+            /*a imagem se ajusta ao tamanho da tela*/
+            background-position: top center;
+        }
+
+        #heading {
+            background: rgba(0,0,0,0.7);
+        }
+
+        #heading div {
+            width: 85%;
+            display: flex;
+            /*disposição do elemento*/
+            justify-content: space-between;
+            /*justificando o conteudo, dando espaço entre eles*/
+            margin: 0 auto;
+        }
+
+        #heading .h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            /*deixando o texto em capslock*/
+            padding: 15px 0; /* 15px para cima e para baixo e 0 para a direita e esquerda */
+            /* A margem "empurra" a Tag, enquanto o padding faz um enchimento para mover*/
+        }
+
+        #heading a {
+            text-decoration: none;
+            color: #fff;
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="heading">
+        <div>
+            <h1 class="h1">
+                <a href="#">Netflix</a> <!-- Copiando o site da Netflix como exemplo de CSS-->
+            </h1>
+            <h2 class="h1 na-direita">
+                <a href="#">Entrar</a>
+            </h2>
+        </div>
+    </header>
+</body>
+
+</html>
