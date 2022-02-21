@@ -1,0 +1,10 @@
+#texto {
+    color: violet; /*É herdada pela div*/
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+p{
+    font-style: initial; /*desativando a herança*/
+    color: inherit; /*desse modo ativamos a herança*/
+}
