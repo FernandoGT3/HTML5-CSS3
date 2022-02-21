@@ -1,0 +1,61 @@
+ul li::after{ /*Um pseudo-elemento depois do conteúdo do elemento*/
+    content: "-"; /*contéudo*/
+    color: red;
+}
+/*Temos o "before" também*/
+/*Em pseudo-classes usamos um dois pontos, já em pseudo-elementos usamos dois dois pontos*/
+
+p::first-letter{/*A primeira letra é diferente*/
+    font-size: 50px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+p::first-line{ /*A primeira linha é diferente*/
+    color: darkorange;
+}
+
+p::selection{/*O que é selecionado fica diferente*/
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.form-field::placeholder{
+    font-size: 15px;
+    color: blue;
+    font-style: italic;
+}
+
+/* ======= Especificidade do CSS =========== */
+/*
+ ID  > Classes, atributos e pseudo-classes > Elementos e pseudo-elementos
+ */
+
+ #p{/*É 1         0            0*/
+     background-color: blue;
+ }
+
+ .p{ /*É 0         1            0*/
+     background-color: yellow;
+ }
+ /*Passando especificade de um para o outro*/
+
+ #p.p{ /*É 1         1            0*/
+     background-color: tomato;
+ }
+
+ p#p.p{/*É 1         1            1*/
+     background-color: turquoise;
+ }
+
+ p#p.p::selection{/*É 1         1            2*/
+    background-color: turquoise;
+}
+
+/*Outra forma de sobrescrever uma especificidade é usando a Tag style na Tag do elemento,
+ou usando o "!important" */
+
+p{
+    background-color: wheat !important;
+}

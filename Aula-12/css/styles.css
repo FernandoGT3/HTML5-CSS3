@@ -63,3 +63,31 @@ diretamente*/
     color: blue;
 }
 
+/*Temos também o Seletores de Irmãos*/
+.pai-dos-irmaos h1+p{
+/*Selecionando o p que é irmão deste h1 e que estiver depois dele*/
+    color: brown;
+}
+.pai-dos-irmaos p+h1{
+    /*Selecionando o h1 que é irmão deste p e que estiver depois dele*/
+    color: blueviolet;
+}
+/*Se colocarmos(~) ao invés de (+), selecionaria todos os elementos depois do que a gente quisesse*/
+/*Podemos também selecionar por atributos, já que no HTML podemos criar os nossos atributos*/
+
+[meu-atributo] {
+    background-color: burlywood;
+}
+/* Poderíamos por assim::
+[meu-atributo 
+= "valor"] {
+    background-color: burlywood;
+}
+Assim dependemos do valor*/
+
+/*Se o atributo tiver uma lista de valores(separados por espaço), podemos especificar qual valor que queremos que pelo menos ele tenha*/
+[meu-atributo2 ~= "valor"] {
+    background-color: burlywood;
+}
+/*Se estiver assim: valor-a valor-b, usamos (|) em vez de (~), ou se o valor começar com a palavra que você definir, usamos(^), seria uma pesquisa,
+e, temos também o "termina com" que é ($) e o "contêm" que é (*)*/

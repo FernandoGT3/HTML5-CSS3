@@ -1,0 +1,94 @@
+.heading{
+    transition: all 1s ease-in-out;
+    /*Como a transição ocorre, quando as propriedades mudarem*/
+}
+
+.heading:hover{
+/*O "hover" é quando passa o mouse sobre o elemento*/
+    background-color: chartreuse;
+}
+
+a{
+    color: chocolate;
+}
+
+a:link{
+    color: rgb(169, 24, 253);
+    /*link que nao foi visitado*/
+}
+
+a:visited{
+    color: rgb(31, 104, 98);
+    /*link que ja foi visitado*/
+}
+
+a:hover{
+    color: white;
+    background-color: tomato;
+    text-decoration: none;
+}
+
+a:active{
+    /*Indica que o elemento está clicado, ativo*/
+    background-color: violet;
+    color: white;
+}
+
+input:focus{
+    /*Mudando a propriedade quando ele estiver em foco, clicado por exemplo*/
+    box-shadow: 0 0 5px rgb(216, 72, 72);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled{
+    /*Quando ele estiver desabilitado*/
+    background-color: rgb(240, 116, 116);
+    cursor: not-allowed; /*Cursor vira o símbolo de proibido*/
+}
+
+.box:checked{
+    /* Quando marcar o input ele ficará maior*/
+    width: 50px;
+    height: 50px;
+}
+
+/*Usando a seleção de irmãos adjacentes, baseado em um elemento estamos mudando o outro*/
+.box:checked + p{
+    background-color: rgb(169, 24, 253);
+}
+
+.box:not(:checked) + p{
+    background-color: rgb(182, 15, 46);
+}
+.pai .lista li:first-child{
+    /*selecionando só o primeiro filho*/
+    color: royalblue;
+}
+
+input:required{
+    background: rgb(31, 104, 98);
+}
+
+/*Pegando todos os parágrafos menos o de classe meio*/
+p:not(.meio){
+    color: blue
+}
+
+/*Podemos selecionar os elementos de um grupo baseados no índice,
+usando apenas a sua posição, ou (even) que seria os pares, e (odd) que são os ímpares*/
+ul li:nth-child(odd){
+    background-color: darkolivegreen;
+}
+
+ul li:nth-child(even){
+    background-color: rgb(191, 204, 168);
+}
+
+ul li:nth-child(3n){ /*vai de 3 em 3*/
+    background-color: rgb(117, 158, 206);
+}
+
+ul li:nth-child(3n+5){ /*vai de 3 em 3 começando do quinto elemento*/
+    background-color: rgb(163, 120, 79);
+}
