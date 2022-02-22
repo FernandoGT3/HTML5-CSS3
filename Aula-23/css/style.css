@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.flex-container{ 
+    display: flex;/*se comporta normalmente igual um display block, seus filhos que são afetados*/
+    flex-direction: row; /* indica a direção principal do flex*/
+    justify-content: flex-start; /*eixo principal*/
+    /* (center) seria o centro e (flex-start) é o padrão
+       (space-around) distrbui de forma proporcional o espaços em volta do elemento
+       (space-between) distrbui de forma proporcional o espaços entre os elementos 
+       (space-evenly) distrbui de forma proporcional o espaços para todos*/
+    align-items: flex-start; /*eixo perpendicular*/
+    /* (streetch) é o padrão, ele estica
+       (center) seria o centro
+       (baseline) é seguindo a fonte
+
+    */
+    /*Align-Itens pega os items e alinha, já o align-content pega o conteúdo*/
+    align-content: flex-start;
+    background-color: yellow;
+    height: 640px;
+    width: 670px;
+    /*gap: 30px;*/
+    flex-wrap: wrap; /*se não tiver espaço para ocupar na linha, ele quebra a linha*/
+}
+
+.flex-item{
+    background-color: tomato;
+    width: 33.33%;
+    color:white
+}
