@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid .col{
+    float: left; /*(inline-block) é a mesclagem do inline e block porém pega os espaços do html*/
+    /*(float) seria o elemento ocupar somente o espaço dele, e libera o restante para os outros,
+    porém quando usamos essa prorpiedade nos filhos de um elemento, eles não computam tamanho para o pai*/
+    width: 33.33%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+p{
+    clear: both; /*limpando a esquerda e a direita*/
+}
+
+.grid{
+    box-sizing: border-box;
+    padding: 15px;
+}
+.grid::after{
+    content: '';
+    display: block;
+    clear: both; /*a grid faz o teu próprio clear*/
+}
+
+.grid .col-content{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+/*Aplicando MediaQueries, deixando o site responsivo */
+@media all and (max-width: 320px){ /* só é aplicado quando esta condição for verdadeira */
+    .grid .col{
+        width: 100%; /*passa a ter apenas uma coluna*/
+    }
+}
+@media all and (min-width: 321px) and (max-width: 768px){ 
+    .grid .col{
+        width: 50%;
+    }
+}
