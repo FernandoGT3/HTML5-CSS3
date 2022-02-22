@@ -1,0 +1,43 @@
+/*(px) é uma unidade absoluta, não se baseia em nada para determinar o tamanho*/
+
+html{
+    font-size: 62.5%; /*elemento root*/
+    /* esse valor para que os elementos se ajustem ao navegador*/
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.pai{
+    width: 100vw; /* é o viewport, o (vh) é pra altura, o (vmin e vmax são relativos ao tamanho do viewport*/
+    height: 100vh;
+    background-color: burlywood;
+}
+
+.pai > div{
+    width: 50%; /* (%) é relativo ao elemento pai*/
+    height:50rem;
+    background-color: red;
+}
+
+p{
+    font-size: 0,5em; /*(em) é uma unidade relativa, se baseia no pai mais próximo*/
+    /*ou seja esta com 25px*/ 
+    /*(rem) é similar ao (em), porém se baseia no elemento root*/
+}
+
+p{
+    font-size: 1.6rem; /*(em) é uma unidade relativa, se baseia no pai mais próximo*/
+    /*ou seja esta com 25px*/ 
+    /*(rem) é similar ao (em), porém se baseia no elemento root*/
+}
+
+.color-one{
+    background-color: aqua
+}
+
+.color-two{
+    background-color: brown;
+}
