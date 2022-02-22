@@ -1,0 +1,17 @@
+p{
+    color: royalblue;
+    background-color: salmon;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold; /*em negrito*/
+    direction: ltr; /*é a direção do texto da esquerda para a direita, e o (rtl) é o da direita para a esquerda*/
+    letter-spacing: 3px; /*espaçamento entre as letras*/
+    word-spacing: 5px;/* espaçamento entre as palavras*/
+    line-height: 30px; /*altura da linha*/
+    text-align: left; /*alinhamento do texto*/ 
+    /*text-decoration: underline;*/
+    text-indent: 20px; /*identa os parágrafos*/
+    text-shadow: 2px 2px 5px red;
+    /* anda esquerda e direita // cima e baixo // esfurmaçando // cor */
+    text-transform: capitalize; /*primeiras letras das palavras ficam maiúsculas*/ 
+}
