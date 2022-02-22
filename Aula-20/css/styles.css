@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+}
+
+.pai{
+ height: 30vh;
+}
+
+.filha-1, .filha-2,.filha-3, .filha-4{
+    width: 300px;
+    height: 300px;
+    background-color: royalblue;  
+    margin: 10px;
+    position: static; /*(static) é o padrão, e as propriedades de posição não funcionam*/
+}
+
+.filha-2{
+    position: absolute; 
+    background-color: salmon;
+    z-index: 1; /* para usar o z-index os elementos devem estar em camadas diferentes*/ 
+}
+
+.filha-1{
+    position: absolute; /*(absolute) muda o elemento de camada, ele fica por cima dos outros elementos,
+    já o relativo não muda o flow da página */
+    top: 50%; /*em relação ao topo da página ou a outro elemento*/ 
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    z-index: 2; /*esta na camada 2*/
+    /* a maior camada que fica por cima */
+}
+
+.filha-3{
+    background-color: seagreen;
+    position: relative;
+    top: 50px; /*se moveu em relação ao outro elemento*/
+}
+
+.outra{
+    position: absolute;
+    font-size: 50px;
+    background-color: slategrey;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    /*ele respeita a relatividade do seu pai que tem position relative*/
+}
+
+.filha-4{
+    position: fixed;/*similar ao (absolute), ao scrollar a tela ela irá junto,ou seja, ficou fixada no navegador */
+    right: 0;
+    top: 30%;
+    background-color: tomato;
+}
+
+ul{
+    margin-top: 50%;
+    height: 100px;
+    overflow-y: auto;
+}
+
+ul li.sticky{
+    position: sticky; /* o A é fixado e rola junto até encontrar o B*/
+    background-color: turquoise;
+    top: 0;
+}
