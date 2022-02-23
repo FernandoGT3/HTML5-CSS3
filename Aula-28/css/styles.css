@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.conteiner{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*(grid-template-areas) você dá nome para as áreas e as coloca onde quiser na página*/
+.grid{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 200px 1fr ;
+        /*definindo qual vai ficar em cada posição que definimos*/
+    grid-template-areas: 
+        "header header" /*o header está nas duas colunas (auto+200) e (auto+1fr)*/
+        "nav main" /*(auto + 200) para a nav e (auto e 1fr) para a main*/
+        "footer footer"
+}
+
+.grid div:nth-child(1){
+    background-color: chartreuse;
+    grid-area: header; /*definindo um nome para o elemento*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid div:nth-child(2){
+    background-color: chocolate;
+    grid-area: nav; /*definindo um nome para o elemento*/
+}
+
+.grid div:nth-child(3){
+    background-color: cornflowerblue;
+    grid-area: main; /*definindo um nome para o elemento*/
+}
+
+.grid div:nth-child(4){
+    background-color: crimson;
+    grid-area: footer; /*definindo um nome para o elemento*/
+}
+
+@media (max-width: 768px){
+    .grid{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+            /*definindo qual vai ficar em cada posição que definimos*/
+        grid-template-areas: 
+            "header" /*o header vai ficar em uma coluna, e os demais tbm*/
+            "nav"
+            "main"
+            "footer"
+    }
+}
