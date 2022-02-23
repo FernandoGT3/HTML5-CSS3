@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.flex-container{ 
+    display: flex;
+    justify-content: space-between; 
+    background-color: yellow;
+    flex-wrap: wrap; /*mesma coisa seria: flex-flow: row wrap*/
+}
+
+.flex-item{
+    background-color: tomato;
+    flex-basis: 320px;/*reservando o espaço antes de distribuir*/
+    flex-grow:1; /*cresce o conteúdo de acordo com o espaço que sobrou, ou que foi reservado, dividindo igualmente entre os elementos*/
+    flex-shrink: 1; /*permite que o elemento diminua, se por 0, não permite mais que ele diminua*/
+    /* o atalho é felx: 1(grow) 1(shrink) 320px(basis)*/
+    color: white;
+    height: 200px;
+}
+
+.flex-container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background-color: yellow;
+    height: 800px;
+}
+
+.flex-item-1{
+    width: 100%;
+    background-color: red;
+    color: white;
+}
+
+.flex-item-1:nth-child(3){
+    align-self: flex-end; /* o align-self alinha um elemento diferente dos outros*/
+}
+
+.flex-item-1:nth-child(4){
+    align-self: stretch; /* o align-self alinha um elemento diferente dos outros*/
+}
+
+.flex-item-1:nth-child(2){
+    align-self: center; /* o align-self alinha um elemento diferente dos outros*/
+}
+
+.flex-item-1:nth-child(1){
+    order: -1; 
+}
+
+.flex-item-1:nth-child(2){
+    order: -2; /*inverte a ordem*/
+}
