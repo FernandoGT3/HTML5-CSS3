@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.grid{
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: [um] 1fr [dois] 1fr [três] 1fr [quatro];
+    grid-template-rows: [um] 1fr [dois] 1fr [três] 1fr [quatro];
+
+}
+
+.grid div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid div:nth-child(5){
+    background-color: red;
+    /* grid-column-start: 1; começa nessa coluna e termina na 4
+    grid-column-end: 4;*/
+    /*grid-column: um / quatro /*podia usar ( 1 e 4) também;
+    grid-row: span 3 /  span 4 */
+    grid-area:  1 / 1 / 4 / 3;
+    /* inicia linha, coluna e termina linha, coluna*/
+}
+
+@media (max-width: 768px){
+    .grid div:nth-child(5){
+        grid-column: span 1;    
+    }
+    
+}
