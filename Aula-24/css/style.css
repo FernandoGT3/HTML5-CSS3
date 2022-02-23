@@ -55,3 +55,36 @@
 .flex-item-1:nth-child(2){
     order: -2; /*inverte a ordem*/
 }
+
+/*====================== Felx dentro do outro ================*/
+
+body{
+    font-size: 24px;
+}
+p{
+    margin:  0 0 24px;
+}
+
+.two-columns{
+    display: flex;
+}
+
+.two-columns .col{
+    display: flex;
+    flex-direction: column;
+    background-color: turquoise;
+    margin: 15px;
+    padding: 30px;
+}
+
+.gallery {
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.gallery .img{
+    flex: 1 0 20%;
+    background-color: violet;
+    height: 50px;
+    margin: 10px
+}
